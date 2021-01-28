@@ -5,6 +5,7 @@ body {
   height: 100%;
   width: 100%;
   background: url('/assets/images/login_bg.jpg') no-repeat center;
+  /* 覆盖整个页面 */
   background-size: cover;
 }
 
@@ -15,6 +16,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
+  /* transform: translate(-50%, -50%); */
   transform: translate(-50%, -50%);
 }
 
@@ -23,6 +25,7 @@ body {
   background: url('/assets/images/login_title.png') no-repeat center;
 }
 
+/* 注册的盒子默认隐藏 */
 .reg-box {
   display: none;
 }
@@ -31,6 +34,7 @@ body {
   padding: 0 30px;
 }
 
+/* flex布局，布局格式，靠后对齐 */
 .links {
   display: flex;
   justify-content: flex-end;
@@ -40,10 +44,12 @@ body {
   font-size: 12px;
 }
 
+/* 子绝父相 */
 .layui-form-item {
   position: relative;
 }
 
+/* 字体图标的位置 */
 .layui-icon {
   position: absolute;
   left: 10px;
