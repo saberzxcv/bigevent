@@ -30,7 +30,8 @@ function getUserInfo() {
 //res.data里边的user.name和nickname以及user_pic数据
 function renderAvatar(user) {
   //username和nickname,看是否都有数据。
-  var name = user.username || user.nickname
+  //优先显示nickname,没有则显示usernam。
+  var name = user.nickname || user.username
   $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
   if (user.user_pic !== null) {
     $('.layui-nav-img').attr('src', user.user_pic).show()
