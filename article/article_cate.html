@@ -35,6 +35,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <!-- 表格数据的模板 -->
     <script type="text/html" id="tpl-table">
         {{each data}}
@@ -48,6 +49,22 @@
             </td>
         </tr>
         {{/each}}
+=======
+    <!-- 表格数据的模板  模板引擎-->
+    <script type="text/html" id="tpl-table">
+        <!-- 模板引擎的循环语法,获取到的data,把name和alias属性填充到表格总。 -->
+        {{each data}}
+    <tr>
+        <td>{{$value.name}}</td>
+        <td>{{$value.alias}}</td>
+        <td>
+            <button type="button" class="layui-btn layui-btn-xs btn-edit" data-id="{{$value.Id}}">编辑</button>
+            <button type="button" class="layui-btn layui-btn-xs layui-btn-danger  btn-delete"
+                data-id="{{$value.Id}}">删除</button>
+        </td>
+    </tr>
+    {{/each}}
+>>>>>>> article
     </script>
 
     <!-- 添加分类的弹出层 -->
